@@ -1,0 +1,29 @@
+@import '../scss/style.scss';
+
+.productsListBanner {
+  background-color: $primary;
+  height: 496px;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+  .container::before {
+    content: '\00a0 想嗨，是不需要理由的。';
+    position: absolute;
+    display: block;
+    color: $secondary;
+    background-color: rgba($primary, .8);
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    letter-spacing: 5px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 38%;
+  }
+}
+
+.productsList {
+  background-color: $primary;
+  padding: 60px 0;
+}

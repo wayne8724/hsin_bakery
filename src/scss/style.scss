@@ -1,0 +1,19 @@
+$primary: #f0dfc8;
+$secondary: #291b25;
+$third: #ef476f;
+
+*{
+    box-sizing: border-box;
+    font-family: 'NotoSerifTC', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.container {
+  max-width: 940px;
+}

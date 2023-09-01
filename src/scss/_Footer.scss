@@ -1,0 +1,103 @@
+@import '../scss/style.scss';
+
+.footer {
+  .top {
+    background-color: $secondary;
+  }
+  .subscribe {
+    padding: 30px 0;
+  }
+  p {
+    color: $primary;
+    margin: 0;
+    font-size: 24px;
+    margin-right: 124px;
+  }
+  .input-group {
+    width: 50%;
+    outline: 5px solid $primary;
+    .input-group-text {
+      background-color: $primary;
+      color: $secondary;
+    }
+    span, button {
+      border-radius: 0;
+      border: 0;
+    }
+    button {
+      background-color: $primary;
+    }
+    button:hover {
+      color: $third;
+    }
+  }
+  .bottom {
+    background-color: rgba($secondary, .8);
+    .connect {
+      padding: 30px 0;
+      .connectLeft{
+        .logo {
+          max-width: 20%;
+          margin-bottom: 115.5px;
+        }
+        .contactInformation {
+          margin-bottom: 30px;
+          p {
+            font-size: 16px;
+          }
+        }
+        .social {
+          a {
+            font-size: 0;
+            margin-right: 8px;
+            i {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+      .connectRight {
+        .title {
+          writing-mode: vertical-rl;
+          p {
+            margin: 0;
+            letter-spacing: 8px;
+          }
+        }
+        .copyRight {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .top {
+      .subscribe {
+        flex-direction: column;
+        p {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .bottom {
+      padding: 30px;
+      .connect {
+        flex-direction: column;
+        padding:  0px;
+        .connectLeft {
+          margin-bottom: 0;
+        }
+        .connectRight {
+          .title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+}

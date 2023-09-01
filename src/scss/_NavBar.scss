@@ -1,0 +1,87 @@
+@import '../scss/style.scss';
+
+.logo-image {
+  max-width: 80px;
+}
+
+.navbar-brand {
+  box-shadow: .5rem .5rem 1.5rem rgba(41, 27, 37, .1);
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.25rem 1rem;
+}
+
+.nav-link {
+  color: $secondary;
+  font-size: 1.2rem;
+  box-shadow: .5rem .5rem 1.5rem rgba(41, 27, 37, .1); //x軸 y軸 模糊半徑 擴散距離 顏色
+  transition: all .25s linear;
+  padding: 4px 0px;
+}
+
+.nav-link:hover {
+  color: $primary;
+  background-color: $secondary;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: $third;
+  bottom: 0;
+  left: 0;
+  transition: width .3s linear;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-item .active {
+  color: $primary;
+  background-color: $secondary;
+}
+
+.nav-item .active:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $third;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+  .navbar-brand {
+    box-shadow: 0 0 0;
+  }
+  .nav-item {
+    margin-bottom: 5px;
+    outline: 1.5px solid $third;
+  }
+  .nav-link {
+    text-align: center;
+    box-shadow: 0 0 0 ;
+  }
+  .nav-link::after {
+    height: 0px;
+  }
+  .nav-item .active:after {
+    height: 0px;
+  }
+  // (已解決)將LOGO定到NAVBAR正中間 ，在Logo的a的class加上mx-auto
+}

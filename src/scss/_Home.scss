@@ -1,0 +1,399 @@
+@import '../scss/style.scss';
+
+// banner
+
+.carousel-item {
+  height: 496px;
+}
+
+.banner {
+  background-color: $primary;
+  height: 100%;
+  padding-top: 15px;
+}
+
+.innerBanner {
+  position: relative;
+}
+
+.HomeBannerTitle {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 100%;
+  color: $primary;
+  background-color: rgba($secondary, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  img {
+    width: 33.33%;
+    margin: 20px;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+// banner下面三個推薦格
+
+.HomeBannerRecommend {
+  position: absolute;
+  z-index: 2;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 780px;
+  width: 100%;
+  color: $primary;
+  background-color: rgba($secondary, 0.65);
+}
+
+.innerRecommend {
+  width: 33.33%;
+  p {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-lr;
+    width: 100%;
+    padding: 74px 0px;
+    letter-spacing: 3px;
+    background-color: rgba($secondary, 0.5);
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+    font-size: 24px;
+		margin: 0;
+		cursor: pointer;
+  }
+  p:hover {
+    background-color: rgba($primary, 0.7);
+    color: $secondary;
+  }
+}
+
+.innerRecommend.left {
+  border-right: 1px solid white;
+  background-image: url(../assets/recommend-left.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.innerRecommend.middle {
+  background-image: url(../assets/recommend-middle.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.innerRecommend.right {
+  border-left: 1px solid white;
+  background-image: url(../assets/recommend-right.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+// intro
+
+.intro {
+  background-color: $primary;
+  padding-top: 200px; //RWD時拔掉
+  .introTop,
+  .introMiddle {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 105px;
+    .introBGC::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      background-color: $secondary;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      //用偽元素使intro色塊置中
+    }
+    .introContent {
+      .introTitle,
+      .introText {
+        writing-mode: vertical-rl;
+        color: $third;
+      }
+      .introTitle {
+        font-size: 32px;
+        letter-spacing: 9px;
+        p {
+          margin: 0;
+        }
+        .titleFix {
+          margin-top: 20px;
+          margin-right: 18px;
+        }
+      }
+      .introText {
+        font-size: 16px;
+        letter-spacing: 8px;
+        line-height: 1.7;
+        p {
+          margin: 0;
+        }
+        span {
+          color: $primary;
+          transition: 0.3s;
+          border-radius: 5px;
+          position: relative;
+          z-index: 1;
+        }
+        span:hover {
+          color: green;
+          background-color: $primary;
+          font-size: 32px;
+          padding-top: 7px;
+        }
+      }
+    }
+  }
+  .introBottom {
+    padding-bottom: 80px;
+    .introBottomTitle {
+      writing-mode: vertical-rl;
+      .introTitle {
+        font-size: 32px;
+        letter-spacing: 9px;
+        font-weight: bold;
+      }
+      .titleFix {
+        margin-top: 20px;
+        margin-right: 18px;
+      }
+    }
+  }
+}
+
+//selection
+
+.selection {
+	background-color: $primary;
+	padding-bottom: 60px;
+	.col-lg-4 {
+		padding: 0;
+	}
+	.selectionCardGap {
+		column-gap: 2.1276595747%;
+	}
+	.selectionCard {
+		outline: .1px solid rgba($secondary, .3);
+		width: 31.914893617%;
+		position: relative;
+	}
+	.selectionCard::before {
+		content: '本日精選';
+		position: absolute;
+		writing-mode: vertical-lr;
+		font-size: 16px;
+		left: 7%;
+		background-color: $secondary;
+		color: $primary;
+		padding: 10px;
+		letter-spacing: 5.5px;
+	}
+	.selectionPic {
+		max-width: 300px;
+		width: 100%;
+		height: 315px;
+		.bi-heart {
+			position: absolute;
+			left: 88%;
+			top: 2.5%;
+			font-size: 20px;
+			color: $primary;
+			cursor: pointer;
+		}
+		.bi-heart:hover {
+			color: $third;
+		}
+		.bi-heart:hover::before {
+			content: '\F415';
+		}
+	}
+	.selectionPic.left {
+		background-image: url(../assets/selection-left.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	.selectionPic.middle {
+		background-image: url(../assets/selection-middle.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	.selectionPic.right {
+		background-image: url(../assets/selection-right.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	.selectionNamePrice {
+		width: 100%;
+		p {
+			margin: 0;
+			font-size: 20px;
+			padding: 14px 0;
+			text-align: center;
+			color: $secondary;
+		}
+		.name {
+			width: 57.667%;
+			border-right: 1px solid rgba($secondary, .3);
+		}
+		.price {
+			width: 42.333%;
+		}
+	}
+	.selectionAddToCart {
+		background-color: rgba($secondary, 1);
+		width: 100%;
+		text-align: center;
+		padding: 16px 0;
+		transition: .3s;
+		a {
+			text-decoration: none;
+			color: $primary;
+			font-size: 24px;
+		}
+	}
+	.selectionAddToCart:hover {
+		background-color: $third;
+		
+		a {
+			color: $secondary;
+		}
+	}
+}
+
+
+// RWD
+
+@media (max-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0;
+  }
+	.banner {
+		padding: 0;
+	}
+  .HomeBannerTitle {
+    width: 50%;
+    top: 25%;
+    p {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+  .carousel-item {
+    height: 300px;
+  }
+  .HomeBannerRecommend {
+    position: static;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .intro {
+    padding-top: 0px;
+    img {
+      display: none;
+    }
+    .introTop,
+    .introMiddle {
+      margin: 0;
+      .introBGC:before {
+        display: none;
+      }
+      .introContent {
+        .introTitle,
+        .introText {
+          writing-mode: horizontal-tb;
+        }
+        .introTitle {
+          text-align: center;
+          padding: 30px 0px;
+          .titleFix {
+            margin: 0;
+          }
+        }
+        .introText {
+          background-color: $secondary;
+          margin: 0;
+          padding: 30px;
+          font-size: 20px;
+          p {
+            display: block;
+            width: 100%;
+            br:not(.space) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .introTop {
+      .introRwdPic {
+        max-width: auto;
+        height: 500px;
+        background-image: url(../assets/intro-top.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .introMiddle {
+      .introRwdPic {
+        max-width: auto;
+        height: 500px;
+        background-image: url(../assets/intro-middle.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .introText {
+        text-align: center;
+      }
+    }
+    .introBottom {
+      padding-bottom: 0;
+      .introBottomTitle {
+        writing-mode: horizontal-tb;
+        text-align: center;
+        font-size: 20px;
+        padding: 30px;
+        .introTitle {
+          margin: 0;
+        }
+        .titleFix {
+          margin: 0;
+        }
+      }
+    }
+  }
+	.selection {
+		.selectionCardGap {
+			column-gap: 0%;
+			padding: 30px;
+			.selectionMiddle, .selectionRight {
+				display: none !important;
+			}
+			.selectionCard {
+				width: 100%;
+				margin: auto;
+			}
+			.selectionPic {
+				max-width: 792px;
+			}
+		}
+	}
+}
