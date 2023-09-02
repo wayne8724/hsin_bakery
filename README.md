@@ -27,10 +27,10 @@ Demo用的帳號密碼
 
   + Vue3 (Options API)
   + VueRouter (hash mode)
-  + JavaScript(ES6)
-  + RWD
-  + Bootstrap
-  + ESlint(airbnb)
+  + JavaScript (ES6)
+  + RWD (Scss)
+  + Bootstrap5
+  + ESlint (airbnb)
 
 ## 使用 Plugin
 
