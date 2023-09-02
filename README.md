@@ -1,6 +1,6 @@
 # 烘焙店電商網站
 
-<font color=##FF0000>目前進度為完成首頁切版、RWD</font-color>
+<font color=#008000>目前進度為完成首頁切版、RWD</font>
 
 ## Demo
 <https://wayne8724.github.io/hsin_bakery/>
