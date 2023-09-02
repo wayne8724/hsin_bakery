@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-primary">
     <div class="container">
       <a class="navbar-brand mx-auto" href="#" aria-label="前往首面">
-        <img src="../assets/Logo.png" alt="logo" class="logo-image">
+        <img src="../assets/logo.png" alt="logo" class="logo-image">
       </a>
       <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarNav"

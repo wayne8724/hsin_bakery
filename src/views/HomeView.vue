@@ -6,7 +6,7 @@
     <div class="banner">
       <div class="innerBanner container">
         <div class="HomeBannerTitle">
-          <img src="../assets/Logo.png" alt="logo">
+          <img src="../assets/logo.png" alt="logo">
           <p>快來買魔幻麵包</p>
           <p>深入海馬迴的美味</p>
         </div>
