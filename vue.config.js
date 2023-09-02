@@ -14,3 +14,9 @@ module.exports = {
       })
   }
 }
+
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/hsin_bakery/' // hsin_bakery 為 repo 名稱
+    : '/'
+}

@@ -21,7 +21,7 @@
         <div class="connect d-flex justify-content-between">
           <div class="connectLeft d-flex flex-column">
             <div class="logo">
-              <img src="../assets/Logo.png" alt="logo">
+              <img src="../assets/logo.png" alt="logo">
             </div>
             <div class="contactInformation">
               <p>07-1234-5678<br>sweetaste@email.com <br>800&ensp;高雄市新興區幸福路 520 號</p>
