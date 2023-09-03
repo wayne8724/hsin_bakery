@@ -1,6 +1,9 @@
 # 烘焙店電商網站
 
-***目前進度為完成首頁切版、RWD***
+*** 目前進度為完成首頁切版、RWD ***
+
+預期進度
+html、css切版 → JS功能、串接API → 改善或新增功能
 
 ## Demo
 <https://wayne8724.github.io/hsin_bakery/>
