@@ -22,7 +22,8 @@
 .nav-link {
   color: $secondary;
   font-size: 1.2rem;
-  box-shadow: .5rem .5rem 1.5rem rgba(41, 27, 37, .1); //x軸 y軸 模糊半徑 擴散距離 顏色
+  // box-shadow: .5rem .5rem 1.5rem rgba(41, 27, 37, .1); //x軸 y軸 模糊半徑 擴散距離 顏色
+  outline: 1px solid rgba($secondary, .2);
   transition: all .25s linear;
   padding: 4px 0px;
 }
@@ -62,7 +63,7 @@
   background-color: $third;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar-collapse {
     margin-top: 1rem;
   }
@@ -71,7 +72,7 @@
   }
   .nav-item {
     margin-bottom: 5px;
-    outline: 1.5px solid $third;
+    outline: 1.5px solid rgba($secondary, .2);
   }
   .nav-link {
     text-align: center;

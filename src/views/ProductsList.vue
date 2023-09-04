@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="productsList">
-      <div class="container d-flex justify-content-lg-between flex-lg-row flex-md-column">
+      <div class="container d-flex justify-content-lg-between flex-lg-row flex-column">
         <div class="leftList">
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
             <span class="btn-group-text">甜點類別</span>
@@ -18,7 +18,7 @@
             <button type="button" class="btn btn-primary">咖啡</button>
           </div>
         </div>
-        <div class="rightList d-flex flex-lg-row justify-content-md-center">
+        <div class="rightList d-flex flex-row justify-content-center">
           <div class="card">
             <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -64,7 +64,7 @@
     </div>
     <div class="productsPagination">
       <div class="container">
-        <nav aria-label="..." class="d-flex justify-content-lg-end justify-content-md-center">
+        <nav aria-label="..." class="d-flex justify-content-lg-end justify-content-center">
           <ul class="pagination">
             <li class="page-item">
               <a class="page-link" href="#" aria-label="previous">

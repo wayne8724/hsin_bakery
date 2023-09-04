@@ -11,7 +11,6 @@
       </button>
       <div class="navbar-collapse collapse"
       id="navbarNav">
-      <!-- d-md-flex justify-content-md-end -->
         <ul class="menu navbar-nav mx-auto">
           <li class="nav-item">
             <router-link to="/" class="nav-link">首頁</router-link>

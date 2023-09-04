@@ -53,15 +53,15 @@
               <div class="col-lg-6 d-flex mx-auto">
                 <img src="../assets/intro-top.jpg" alt="">
               </div>
-              <div class="col-lg-6 col-md-12
-              introContent d-flex flex-lg-row-reverse justify-content-between flex-md-column">
+              <div class="col-lg-6
+              introContent d-flex justify-content-between">
                 <div class="introTitle d-flex flex-column">
                   <p>為什麼，</p>
                   <p class="titleFix">要買我們的產品？</p>
                 </div>
                 <div class="introRwdPic"></div>
                 <div class="introText d-flex flex-row
-                justify-content-center mx-lg-auto">
+                justify-content-center mx-auto">
                   <p>因為便宜，<br>因為多樣，<br>因為美味，
                     <br>因為上癮。<br class="space"><br class="space">第一口好吃，
                     <br>第二口繼續吃。<br>第三口我還要吃。<br>第四口快買給我吃。<br>第五口快讓我不停地吃。</p>
@@ -75,15 +75,15 @@
         <div class="introBGC">
           <div class="container">
             <div class="row d-flex justify-content-evenly rowNoMargin">
-              <div class="col-lg-6 col-md-12
-              introContent d-flex flex-lg-row-reverse justify-content-between flex-md-column">
+              <div class="col-lg-6
+              introContent d-flex justify-content-between">
                 <div class="introTitle d-flex flex-column">
                   <p>為什麼，</p>
                   <p class="titleFix">我們的產品受歡迎？</p>
                 </div>
                 <div class="introRwdPic"></div>
                 <div class="introText d-flex flex-row
-                justify-content-center mx-lg-auto">
+                justify-content-center">
                   <p>因為，<br><br><br>我們，<br><br><br>加了<span>大麻</span>。</p>
                 </div>
               </div>
@@ -107,7 +107,7 @@
     <div class="selection" id="selection">
       <div class="container">
         <div class="row selectionCardGap d-flex justify-content-between">
-          <div class="selectionCard selectionLeft col-lg-4 col-lg-4 d-flex
+          <div class="selectionCard selectionLeft col-lg-4 d-flex
           flex-column justify-content-between align-items-center">
             <div class="selectionPic left">
               <i class="bi bi-heart"></i>

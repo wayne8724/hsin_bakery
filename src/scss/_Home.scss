@@ -123,6 +123,7 @@
       .introText {
         writing-mode: vertical-rl;
         color: $third;
+        margin: auto;
       }
       .introTitle {
         font-size: 32px;
@@ -204,7 +205,6 @@
 		letter-spacing: 5.5px;
 	}
 	.selectionPic {
-		max-width: 300px;
 		width: 100%;
 		height: 315px;
 		.bi-heart {
@@ -239,6 +239,7 @@
 	}
 	.selectionNamePrice {
 		width: 100%;
+    outline: 1px solid rgba($secondary, .1);
 		p {
 			margin: 0;
 			font-size: 20px;
@@ -278,7 +279,7 @@
 
 // RWD
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
     width: 768px;
     padding: 0;
@@ -316,6 +317,7 @@
         display: none;
       }
       .introContent {
+        flex-direction: column;
         .introTitle,
         .introText {
           writing-mode: horizontal-tb;
@@ -391,9 +393,6 @@
 			.selectionCard {
 				width: 100%;
 				margin: auto;
-			}
-			.selectionPic {
-				max-width: 792px;
 			}
 		}
 	}
