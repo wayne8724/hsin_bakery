@@ -106,7 +106,7 @@
     <!-- selection -->
     <div class="selection" id="selection">
       <div class="container">
-        <div class="row selectionCardGap">
+        <div class="row selectionCardGap d-flex justify-content-between">
           <div class="selectionCard selectionLeft col-lg-4 col-lg-4 d-flex
           flex-column justify-content-between align-items-center">
             <div class="selectionPic left">

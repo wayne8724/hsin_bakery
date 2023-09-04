@@ -8,59 +8,81 @@
       </div>
     </div>
     <div class="productsList">
-      <div class="container d-flex justify-content-between">
+      <div class="container d-flex justify-content-lg-between flex-lg-row flex-md-column">
         <div class="leftList">
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
-            <span class="btn-group-text">123</span>
-            <button type="button" class="btn btn-primary">Left</button>
-            <button type="button" class="btn btn-primary">Middle</button>
-            <button type="button" class="btn btn-primary">Right</button>
-            <button type="button" class="btn btn-primary">Right</button>
+            <span class="btn-group-text">甜點類別</span>
+            <button type="button" class="btn btn-primary">所有商品</button>
+            <button type="button" class="btn btn-primary">本日精選</button>
+            <button type="button" class="btn btn-primary">麵包</button>
+            <button type="button" class="btn btn-primary">咖啡</button>
           </div>
         </div>
-        <div class="rightList">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="card">
-                <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a
-                    content. This content is a little bit longer.</p>
-                </div>
+        <div class="rightList d-flex flex-lg-row justify-content-md-center">
+          <div class="card">
+            <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title d-flex">
+                <p class="name">焦糖瑪卡龍</p>
+                <p class="price">NT$ 450</p>
               </div>
+              <a href="#" class="btn btn-primary">加入購物車</a>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a l</p>
-                </div>
+          </div>
+          <div class="card">
+            <img src="../assets/selection-right.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title d-flex">
+                <p class="name">焦糖瑪卡龍</p>
+                <p class="price">NT$ 450</p>
               </div>
+              <a href="#" class="btn btn-primary">加入購物車</a>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is
-                    content.</p>
-                </div>
+          </div>
+          <div class="card">
+            <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title d-flex">
+                <p class="name">焦糖瑪卡龍</p>
+                <p class="price">NT$ 450</p>
               </div>
+              <a href="#" class="btn btn-primary">加入購物車</a>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a
-                    content. This content is a little bit longer.</p>
-                </div>
+          </div>
+          <div class="card">
+            <img src="../assets/recommend-right.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title d-flex">
+                <p class="name">焦糖瑪卡龍</p>
+                <p class="price">NT$ 450</p>
               </div>
+              <a href="#" class="btn btn-primary">加入購物車</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="productsPagination">
+      <div class="container">
+        <nav aria-label="..." class="d-flex justify-content-lg-end justify-content-md-center">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="previous">
+                <i class="bi bi-caret-left-fill"></i>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="previous">
+                <i class="bi bi-caret-right-fill"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </body>
@@ -83,4 +105,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>@import '../scss/_ProductsList.scss'</style>
+<style lang="scss" scoped>
+@import '../scss/_ProductsList.scss'
+</style>
