@@ -24,9 +24,9 @@
         </ul>
         <ul class="icon navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link" href="" aria-label="購物車">
+            <router-link to="/cart" class="nav-link">
               <i class="bi bi-cart4"></i>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>

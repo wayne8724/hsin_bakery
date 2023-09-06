@@ -17,7 +17,7 @@
         <div class="password mb-3 mx-auto">
           <label for="password" class="form-label">
             <i class="bi bi-key-fill"></i>
-            <input type="password" class="form-control" id="password" name="password"
+            <input type="password" class="form-control " id="password" name="password"
             placeholder="請輸入使用者密碼">
           </label>
         </div>

@@ -56,6 +56,8 @@ form {
   }
   input {
     border-radius: 0;
+    border: .1px solid $primary;
+    background-color: $secondary;
   }
 }
 
