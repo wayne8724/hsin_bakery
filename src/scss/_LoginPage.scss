@@ -1,0 +1,100 @@
+@import '../scss/style.scss';
+
+.login {
+  background-color: $primary;
+  padding: 60px 0;
+}
+
+form {
+  background-color: $secondary;
+  max-width: 390px;
+  width: 390px;
+}
+
+.loginTitle {
+  font-size: 36px;
+  line-height: 50px;
+  color: $primary;
+  padding: 40px 0;
+}
+
+.form-label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.email, .password {
+  background-color: $primary;
+  width: 84.615%;
+}
+
+.bi {
+  font-size: 24px;
+  padding: 0px 20px;
+}
+
+.form-control {
+  border: 1px;
+  border-radius: 0;
+  background-color: $primary;
+  padding: 18px 0 16px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0;
+}
+
+.form-check {
+  width: 84.615%;
+  color: $primary;
+  margin-bottom: 25px;
+  label {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  input {
+    border-radius: 0;
+  }
+}
+
+.loginBtn {
+  border-radius: 0;
+  font-size: 24px;
+  line-height: 33px;
+  padding: 16px 0;
+  width: 100%;
+  border: solid $secondary;
+  transition: .3s;
+}
+
+.loginBtn:hover {
+  background-color: $secondary;
+  color: $third;
+  border: solid $third;
+}
+
+//RWD
+
+@media (max-width: 992px) {
+  .login {
+    padding: 0;
+  }
+  .container {
+    max-width: 100%;
+  }
+  form {
+    max-width: 100%;
+    width: 100%;
+  }
+  .loginTitle {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 0 0;
+  }
+  .email {
+    margin-top: 25px;
+  }
+}
+

@@ -19,7 +19,7 @@
             <router-link to="/products" class="nav-link">商品</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">登入</a>
+            <router-link to="/login" class="nav-link">登入</router-link>
           </li>
         </ul>
         <ul class="icon navbar-nav ">

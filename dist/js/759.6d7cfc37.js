@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkhsin_bakery"]=self["webpackChunkhsin_bakery"]||[]).push([[759],{759:function(n,r,e){e.r(r),e.d(r,{default:function(){return c}});var u=e(252);function t(n,r,e,t,a,i){return(0,u.wg)(),(0,u.iD)("div",null," 1 ")}var a={data(){return{}}},i=e(744);const s=(0,i.Z)(a,[["render",t]]);var c=s}}]);
-//# sourceMappingURL=759.6d7cfc37.js.map
