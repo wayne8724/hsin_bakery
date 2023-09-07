@@ -1,0 +1,82 @@
+@import '../scss/style.scss';
+
+//付款表單
+
+.checkoutPageLeft {
+  background-color: $secondary;
+  color: $primary;
+  width: 48.936%;
+  margin-right: 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.title {
+  margin-bottom: 30px;
+  .titleText {
+    line-height: 50px;
+    font-size: 36px;
+  }
+}
+
+.titleBar{
+  .circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+  }
+  .line {
+    width: 75px;
+    height: 1px;
+    background-color: $primary;
+  }
+  .first::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $primary;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+label {
+  line-height: 28px;
+  font-size: 20px;
+  width: 100%;
+  input {
+    border-radius: 0;
+    line-height: 56px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.nextStep {
+  width: 100%;
+  padding: 0;
+  line-height: 33px;
+  font-size: 24px;
+  padding: 15px 0;
+  background-color: $primary;
+  color: $secondary;
+  border: 1px solid $secondary;
+  transition: .3s;
+}
+
+.nextStep:hover {
+  background-color: $secondary;
+  color: $third;
+  border: 1px solid $third;
+}

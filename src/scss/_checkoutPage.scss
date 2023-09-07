@@ -1,0 +1,71 @@
+@import '../scss/style.scss';
+
+.checkoutPage {
+  background-color: $primary;
+  padding: 30px 0;
+}
+//訂單摘要
+
+.checkoutPageRight {
+  width: 31.914%;
+}
+
+.orderSummary {
+  background-color: $primary;
+  color: $secondary;
+  outline: 1px solid $secondary;
+  margin-bottom: 20px;
+}
+
+.orderSummaryTitle, .shoppingListTitle {
+  line-height: 33px;
+  font-size: 24px;
+  text-align: center;
+  padding: 16px 0;
+  outline: 1px solid $secondary;
+  background-color: $secondary;
+  color: $primary;
+}
+
+.orderSummaryDetail, .shoppingListDetail {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 18px;
+}
+
+.orderSummaryPrice, .orderSummaryCoupon, .shoppingListName {
+  font-weight: 100;
+}
+
+.orderSummaryTotal, .shoppingListPrice {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.product {
+  padding: 16px 20px;
+  outline: 1px solid $secondary;
+}
+
+.productImg {
+  width: 40%;
+  outline: 1px solid $third;
+}
+
+.shoppingListDetail {
+  width: 60%;
+  margin-left: 20px;
+  padding: 0;
+  span {
+    text-align: left;
+  }
+  .shoppingListName {
+    line-height: 22px;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .shoppingListPrice {
+    line-height: 28px;
+    font-size: 20px;
+  }
+}

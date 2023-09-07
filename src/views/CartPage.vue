@@ -74,7 +74,7 @@
             <span class="rightCartTotal">NT$ 2000</span>
           </div>
           <div class="checkOutBtn">
-            <button type="button" class=" checkoutBtn btn">結帳</button>
+            <button type="button" class=" checkoutBtn btn" @click="checkoutPage()">結帳</button>
           </div>
         </div>
       </div>
@@ -96,6 +96,11 @@ export default {
   components: {
     NavBar,
     Footer,
+  },
+  methods: {
+    checkoutPage() {
+      this.$router.push('/checkout');
+    },
   },
 };
 </script>

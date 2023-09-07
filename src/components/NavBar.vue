@@ -19,13 +19,18 @@
             <router-link to="/products" class="nav-link">商品</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/login" class="nav-link">登入</router-link>
+            <router-link to="/#" class="nav-link">收藏</router-link>
           </li>
         </ul>
-        <ul class="icon navbar-nav ">
+        <ul class="icon navbar-nav d-flex flex-row">
           <li class="nav-item">
             <router-link to="/cart" class="nav-link">
               <i class="bi bi-cart4"></i>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/login" class="nav-link">
+              <i class="bi bi-person-fill"></i>
             </router-link>
           </li>
         </ul>

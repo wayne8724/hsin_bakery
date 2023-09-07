@@ -5,7 +5,7 @@
       <form class="d-flex justify-content-center flex-column
       align-items-start">
         <div class="loginTitle mx-auto">
-          會員登入
+          管理系統登入
         </div>
         <div class="email mb-3 mx-auto">
           <label for="email" class="form-label">
@@ -26,7 +26,7 @@
             <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox">
           </label>
         </div>
-        <button type="submit" class="btn btn-primary loginBtn">登入帳號</button>
+        <button type="submit" class="btn btn-primary loginBtn">登入</button>
       </form>
     </div>
   </div>

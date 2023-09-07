@@ -39,7 +39,9 @@
             <p @click="goAnchor('#selection')"
             @keydown="goAnchor('#selection')">本日精選</p>
           </div>
-          <div class="innerRecommend middle"><p>商品一欄</p></div>
+          <div class="innerRecommend middle">
+            <router-link to="/products" class="selectionLink">商品一欄</router-link>
+          </div>
           <div class="innerRecommend right"><p>優惠領取</p></div>
         </div>
       </div>
@@ -54,7 +56,7 @@
                 <img src="../assets/intro-top.jpg" alt="">
               </div>
               <div class="col-lg-6
-              introContent d-flex justify-content-between">
+              introContent d-flex justify-content-between flex-lg-row-reverse">
                 <div class="introTitle d-flex flex-column">
                   <p>為什麼，</p>
                   <p class="titleFix">要買我們的產品？</p>
@@ -76,7 +78,7 @@
           <div class="container">
             <div class="row d-flex justify-content-evenly rowNoMargin">
               <div class="col-lg-6
-              introContent d-flex justify-content-between">
+              introContent d-flex justify-content-between flex-lg-row-reverse">
                 <div class="introTitle d-flex flex-column">
                   <p>為什麼，</p>
                   <p class="titleFix">我們的產品受歡迎？</p>
