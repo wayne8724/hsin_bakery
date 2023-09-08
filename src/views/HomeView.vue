@@ -84,7 +84,7 @@
                   <p class="titleFix">我們的產品受歡迎？</p>
                 </div>
                 <div class="introRwdPic"></div>
-                <div class="introText d-flex flex-row
+                <div class="introText middleIntroTextMargin d-flex flex-row
                 justify-content-center">
                   <p>因為，<br><br><br>我們，<br><br><br>加了<span>大麻</span>。</p>
                 </div>

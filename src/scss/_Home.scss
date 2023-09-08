@@ -22,8 +22,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  width: 100%;
+  max-width: 62.5%;
   color: $primary;
   background-color: rgba($secondary, 0.65);
   display: flex;
@@ -49,7 +48,7 @@
   top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 780px;
+  max-width: 81.25%;
   width: 100%;
   color: $primary;
   background-color: rgba($secondary, 0.65);
@@ -176,6 +175,9 @@
           padding-top: 7px;
         }
       }
+      .middleIntroTextMargin {
+        margin: auto;
+      } 
     }
   }
   .introBottom {
@@ -299,15 +301,14 @@
 
 @media (max-width: 992px) {
   .container {
-    width: 768px;
+    max-width: 762px;
     padding: 0;
   }
 	.banner {
 		padding: 0;
 	}
   .HomeBannerTitle {
-    width: 50%;
-    top: 25%;
+    top: 27%;
     p {
       font-size: 15px;
       margin-bottom: 5px;
@@ -322,6 +323,7 @@
     top: 0;
     left: 0;
     transform: translate(0, 0);
+    max-width: 100%;
   }
   .intro {
     padding-top: 0px;

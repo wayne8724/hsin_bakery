@@ -23,6 +23,10 @@ const routes = [
     path: '/checkout',
     component: () => import('../views/checkoutPage.vue'),
   },
+  {
+    path: '/result',
+    component: () => import('../views/checkoutResult.vue'),
+  },
 ];
 
 const router = createRouter({

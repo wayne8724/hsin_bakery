@@ -38,7 +38,19 @@
     height: 1px;
     background-color: $primary;
   }
+  .first {
+    background-color: $primary;
+  }
   .first::before {
+    content: '\2713';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      color: $secondary;
+  }
+  .second::before {
     content: '';
     position: absolute;
     width: 15px;

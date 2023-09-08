@@ -11,7 +11,7 @@
       </button>
       <div class="navbar-collapse collapse"
       id="navbarNav">
-        <ul class="menu navbar-nav mx-auto">
+        <ul class="menu navbar-nav ms-auto">
           <li class="nav-item">
             <router-link to="/" class="nav-link">首頁</router-link>
           </li>
@@ -19,7 +19,7 @@
             <router-link to="/products" class="nav-link">商品</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/#" class="nav-link">收藏</router-link>
+            <router-link to="/cart" class="nav-link">收藏</router-link>
           </li>
         </ul>
         <ul class="icon navbar-nav d-flex flex-row">

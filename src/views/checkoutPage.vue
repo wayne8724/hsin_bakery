@@ -2,7 +2,7 @@
   <NavBar></NavBar>
   <div class="checkoutPage">
     <div class="container d-flex justify-content-center">
-      <checkoutOne></checkoutOne>
+      <checkoutList></checkoutList>
       <div class="checkoutPageRight">
         <div class="orderSummary">
           <div class="orderSummaryTitle">訂單摘要</div>
@@ -34,17 +34,13 @@
       </div>
     </div>
   </div>
-  <!-- <checkoutTwo></checkoutTwo> -->
-  <!-- <checkoutThree></checkoutThree> -->
   <Footer></Footer>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
 import Footer from '@/components/Footer.vue';
-import checkoutOne from '@/components/checkoutOne.vue';
-// import checkoutTwo from '@/components/checkoutTwo.vue';
-// import checkoutThree from '@/components/checkoutThree.vue';
+import checkoutList from '@/components/checkoutList.vue';
 
 export default {
   data() {
@@ -54,9 +50,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    checkoutOne,
-    // checkoutTwo,
-    // checkoutThree,
+    checkoutList,
   },
 };
 </script>

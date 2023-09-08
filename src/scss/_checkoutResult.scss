@@ -1,0 +1,63 @@
+@import '../scss/style.scss';
+
+.checkoutResult {
+  background-color: $secondary;
+}
+
+.container {
+  padding: 30px 0;
+}
+
+.table, .total, .orderInfo, .userInfo {
+  width: 66.66%;
+  // max-width: 66.66%;
+}
+
+.table {
+  outline: 1px solid $primary;
+  margin: 0;
+}
+
+th, td {
+  color: $primary;
+  padding: 0.75rem;
+}
+
+.resultPic {
+  width: 100px;
+}
+
+.total {
+  padding: 8px 12px;
+  background-color: $secondary;
+  outline: 1px solid $primary;
+  span, p {
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  span {
+    margin-right: 10px;
+  }
+  p {
+    width: 100px;
+    text-align: right;
+  }
+}
+
+.orderInfo, .userInfo {
+  margin-top: 24px;
+  color: $primary;
+  outline: 1px solid $primary;
+}
+
+.title {
+  padding: 12px;
+  font-size: 24px;
+  border-bottom: 1px solid $primary;
+}
+
+.content {
+  padding: 15px 25px;
+}
