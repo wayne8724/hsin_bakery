@@ -1,0 +1,30 @@
+@import '../scss/style.scss';
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  background-color: $primary;
+  color: $secondary;
+  border-radius: 0;
+}
+
+.couponCode {
+  font-size: 36px;
+  color: $third;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn:hover {
+  color: $primary;
+  background-color: $secondary;
+  border-radius: 0;
+}
+
+.btn-close {
+  margin: 0;
+}

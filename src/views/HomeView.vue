@@ -42,7 +42,8 @@
           <div class="innerRecommend middle">
             <router-link to="/products" class="selectionLink">商品一欄</router-link>
           </div>
-          <div class="innerRecommend right"><p>優惠領取</p></div>
+          <div class="innerRecommend right" @click="openCouponModal"
+          @keydown="openCouponModal"><p>優惠領取</p></div>
         </div>
       </div>
     </div>
@@ -161,23 +162,30 @@
   </body>
 
   <Footer></Footer>
+
+  <couponModal ref="couponModal"></couponModal>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
 import Footer from '@/components/Footer.vue';
+import couponModal from '@/components/couponModal.vue';
 
 export default {
   name: 'HomeView',
   components: {
     NavBar,
     Footer,
+    couponModal,
   },
   methods: {
     goAnchor(selector) {
       document.querySelector(selector).scrollIntoView({
         behavior: 'smooth',
       });
+    },
+    openCouponModal() {
+      this.$refs.couponModal.showModal();
     },
   },
 };
