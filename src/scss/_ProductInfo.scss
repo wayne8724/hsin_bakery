@@ -1,0 +1,119 @@
+@import '../scss/style.scss';
+
+// 路徑
+
+.path {
+  background-color: $primary;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.pathA {
+  text-decoration: none;
+  color: $secondary;
+}
+
+.pathA:hover {
+  color: $third;
+}
+
+.productSpan {
+  color: $third;
+}
+
+// 商品資訊
+
+.productInfo {
+  background-color: $secondary;
+}
+
+.infoLeft, .infoRight {
+  background-color: $primary;
+}
+
+img {
+  width: 600px;
+  height: 400px;
+}
+
+h3 {
+  padding: 5px;
+  border-bottom: 3px solid rgba($secondary, .5);
+  position: relative;
+}
+
+.favorite {
+  position: absolute;
+  font-size: 1.25rem;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.favorite:hover {
+  color: $third;
+}
+
+.countBox {
+  padding: 10px;
+  margin-bottom: 16px;
+  border-top: 3px solid rgba($secondary, .5);
+}
+
+.priceBox, .addCart {
+  width: 50%;
+}
+
+.priceBox {
+  border-right: 1px solid rgba($secondary, .5);
+}
+
+.category {
+  display: inline-block;
+  background-color: $secondary;
+  color: $primary;
+  margin: 10px 0;
+  padding: 5px 10px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.price {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.count {
+  margin-bottom: 10px;
+}
+
+label {
+  line-height: 24px;
+  font-size: 16px;
+}
+
+#count {
+  width: 100px;
+}
+
+.addCartBtn {
+  border-radius: 0;
+  background-color: $secondary;
+  color: $primary;
+  width: 90%;
+  transition: .3s;
+}
+
+.addCartBtn:hover {
+  background-color: $third;
+  color: $secondary;
+}
+
+.total {
+  padding: 0 20px;
+  span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

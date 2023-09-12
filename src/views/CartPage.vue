@@ -1,5 +1,6 @@
 <template>
   <NavBar></NavBar>
+  <buyProcess :activeStep="activeStep"></buyProcess>
   <div class="cart">
     <div class="container d-flex justify-content-between">
       <div class="leftCart">
@@ -87,15 +88,18 @@
 <script>
 import NavBar from '@/components/NavBar.vue';
 import Footer from '@/components/Footer.vue';
+import buyProcess from '@/components/buyProcess.vue';
 
 export default {
   data() {
     return {
+      activeStep: 1,
     };
   },
   components: {
     NavBar,
     Footer,
+    buyProcess,
   },
   methods: {
     checkoutPage() {

@@ -1,5 +1,6 @@
 <template>
   <NavBar></NavBar>
+  <buyProcess :activeStep="activeStep"></buyProcess>
   <div class="checkoutResult">
     <div class="container d-flex flex-column align-items-center">
       <table class="table">
@@ -81,15 +82,18 @@
 <script>
 import NavBar from '@/components/NavBar.vue';
 import Footer from '@/components/Footer.vue';
+import buyProcess from '@/components/buyProcess.vue';
 
 export default {
   data() {
     return {
+      activeStep: 3,
     };
   },
   components: {
     NavBar,
     Footer,
+    buyProcess,
   },
   methods: {
     checkoutPage() {

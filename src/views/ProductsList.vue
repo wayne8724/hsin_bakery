@@ -13,14 +13,17 @@
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
             <span class="btn-group-text">甜點類別</span>
             <button type="button" class="btn btn-primary">所有商品</button>
-            <button type="button" class="btn btn-primary">本日精選</button>
             <button type="button" class="btn btn-primary">麵包</button>
-            <button type="button" class="btn btn-primary">咖啡</button>
+            <button type="button" class="btn btn-primary">吐司</button>
+            <button type="button" class="btn btn-primary">蛋糕</button>
+            <button type="button" class="btn btn-primary">月餅</button>
           </div>
         </div>
         <div class="rightList d-flex flex-row justify-content-center">
           <div class="card">
-            <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            <button @click="productInfo" class="imgBtn">
+              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            </button>
             <div class="card-body">
               <div class="card-title d-flex">
                 <p class="name">焦糖瑪卡龍</p>
@@ -30,7 +33,9 @@
             </div>
           </div>
           <div class="card">
-            <img src="../assets/selection-right.jpg" class="card-img-top" alt="...">
+            <button @click="productInfo" class="imgBtn">
+              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            </button>
             <div class="card-body">
               <div class="card-title d-flex">
                 <p class="name">焦糖瑪卡龍</p>
@@ -40,7 +45,9 @@
             </div>
           </div>
           <div class="card">
-            <img src="../assets/selection-middle.jpg" class="card-img-top" alt="...">
+            <button @click="productInfo" class="imgBtn">
+              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            </button>
             <div class="card-body">
               <div class="card-title d-flex">
                 <p class="name">焦糖瑪卡龍</p>
@@ -50,7 +57,9 @@
             </div>
           </div>
           <div class="card">
-            <img src="../assets/recommend-right.jpg" class="card-img-top" alt="...">
+            <button @click="productInfo" class="imgBtn">
+              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+            </button>
             <div class="card-body">
               <div class="card-title d-flex">
                 <p class="name">焦糖瑪卡龍</p>
@@ -101,6 +110,11 @@ export default {
   components: {
     NavBar,
     Footer,
+  },
+  methods: {
+    productInfo() {
+      this.$router.push('/product');
+    },
   },
 };
 </script>

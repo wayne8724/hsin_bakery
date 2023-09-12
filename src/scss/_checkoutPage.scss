@@ -4,6 +4,74 @@
   background-color: $primary;
   padding: 30px 0;
 }
+
+//付款表單
+
+.checkoutPageLeft {
+  background-color: $secondary;
+  color: $primary;
+  width: 48.936%;
+  margin-right: 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.title {
+  margin-bottom: 30px;
+  .titleText {
+    line-height: 50px;
+    font-size: 36px;
+    margin: auto;
+  }
+}
+
+label {
+  line-height: 28px;
+  font-size: 20px;
+  width: 100%;
+  input, select, textarea {
+    border-radius: 0;
+    line-height: 56px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 0 12px;
+  }
+  select {
+    border-radius: 0;
+    font-size: 16px;
+  }
+  textarea {
+    margin-bottom: 0;
+  }
+}
+
+button {
+  width: 100%;
+}
+
+.nextStep {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  line-height: 33px;
+  font-size: 24px;
+  padding: 15px 0;
+  background-color: $primary;
+  color: $secondary;
+  border: 5px solid $secondary;
+  transition: .3s;
+}
+
+.nextStep:hover {
+  background-color: $secondary;
+  color: $third;
+  border: 5px solid $third;
+}
+
 //訂單摘要
 
 .checkoutPageRight {
