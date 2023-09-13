@@ -111,46 +111,16 @@
       <div class="container">
         <div class="row selectionCardGap d-flex justify-content-between">
           <div class="selectionCard selectionLeft col-lg-4 d-flex
-          flex-column justify-content-between align-items-center">
-            <div class="selectionPic left">
+          flex-column justify-content-between align-items-center"
+          v-for="item in selectionProducts" :key="item.id">
+            <div class="selectionPic">
               <i class="bi bi-heart"></i>
+              <img :src="item.imageUrl" alt="selectionImg" class="selectionImg">
             </div>
             <div class="selectionNamePrice d-flex
             flex-row justify-content-between align-items-center">
-              <p class="name">焦糖馬卡龍</p>
-              <p class="price">NT$450</p>
-            </div>
-            <div class="selectionAddToCart">
-              <a href="#">加入購物車</a>
-            </div>
-          </div>
-          <div class="selectionCard selectionMiddle col-lg-4 d-flex
-          flex-column justify-content-between align-items-center">
-            <div class="selectionPic middle">
-              <i class="bi bi-heart"></i>
-            </div>
-            <div class="selectionNamePrice">
-              <div class="selectionName d-flex
-            flex-row justify-content-between align-items-center">
-              <p class="name">焦糖馬卡龍</p>
-              <p class="price">NT$450</p>
-              </div>
-            </div>
-            <div class="selectionAddToCart">
-              <a href="#">加入購物車</a>
-            </div>
-          </div>
-          <div class="selectionCard selectionRight col-lg-4 d-flex
-          flex-column justify-content-between align-items-center">
-            <div class="selectionPic right">
-              <i class="bi bi-heart"></i>
-            </div>
-            <div class="selectionNamePrice">
-              <div class="selectionName d-flex
-            flex-row justify-content-between align-items-center">
-              <p class="name">焦糖馬卡龍</p>
-              <p class="price">NT$450</p>
-              </div>
+              <p class="name">{{ item.title }}</p>
+              <p class="price">NT$ {{ item.price }}</p>
             </div>
             <div class="selectionAddToCart">
               <a href="#">加入購物車</a>
@@ -162,7 +132,6 @@
   </body>
 
   <Footer></Footer>
-
   <couponModal ref="couponModal"></couponModal>
 </template>
 
@@ -172,6 +141,12 @@ import Footer from '@/components/Footer.vue';
 import couponModal from '@/components/couponModal.vue';
 
 export default {
+  data() {
+    return {
+      selectionAll: [],
+      selectionProducts: [],
+    };
+  },
   name: 'HomeView',
   components: {
     NavBar,
@@ -187,6 +162,21 @@ export default {
     openCouponModal() {
       this.$refs.couponModal.showModal();
     },
+    async getSelection() {
+      try {
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`;
+        const response = await this.$http.get(url);
+        this.selectionAll = response.data.products;
+        this.selectionProducts = [this.selectionAll[1], this.selectionAll[6], this.selectionAll[8]];
+        console.log(this.selectionProducts);
+        console.log(this.selectionAll);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  created() {
+    this.getSelection();
   },
 };
 </script>

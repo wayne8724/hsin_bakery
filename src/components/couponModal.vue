@@ -20,7 +20,7 @@
           <button type="button" class="btn
           btn-primary" @click="copyCode"
           v-if="this.copyStatus === true">複製優惠碼</button>
-          <button type="button" class="btn
+          <button type="button" @click="hideModal()" class="btn
           btn-primary" data-bs-dismiss="modal"
           >關閉
           </button>
@@ -54,7 +54,7 @@ export default {
         // 取得span標籤裡的優惠碼
         const code = spanElement.textContent;
         // 將優惠碼複製到剪貼簿
-        navigator.clipboard.writeText(code);
+        await navigator.clipboard.writeText(code);
         this.copyStatus = 0;
       } catch (error) {
         console.log(error);
