@@ -123,7 +123,8 @@
               <p class="price">NT$ {{ item.price }}</p>
             </div>
             <div class="selectionAddToCart">
-              <a href="#">加入購物車</a>
+              <button type="button" class="addCart"
+              @click="addCart(item.id)">加入購物車</button>
             </div>
           </div>
         </div>
@@ -168,8 +169,26 @@ export default {
         const response = await this.$http.get(url);
         this.selectionAll = response.data.products;
         this.selectionProducts = [this.selectionAll[1], this.selectionAll[6], this.selectionAll[8]];
-        console.log(this.selectionProducts);
-        console.log(this.selectionAll);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async addCart(id) {
+      try {
+        const cartData = {
+          product_id: id,
+          qty: 1,
+        };
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+        const response = await this.$http.post(url, { data: cartData });
+        if (response) {
+          this.$swal.fire({
+            text: `${response.data.data.product.title}已加入購物車！`,
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       } catch (error) {
         console.log(error);
       }
@@ -177,6 +196,11 @@ export default {
   },
   created() {
     this.getSelection();
+    // this.$swal.fire({
+    //   text: 'wow',
+    //   background: '#CE0000',
+    // });
+    // 測試
   },
 };
 </script>

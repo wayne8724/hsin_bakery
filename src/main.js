@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './common/font.css';
+// 導入sweetalert2
+import Swal from 'sweetalert2';
 
 // 匯入 vee-validate 主套件
 import {
@@ -41,5 +43,8 @@ app.component('LoadingComponent', Loading);
 app.component('VForm', Form);
 app.component('VField', Field);
 app.component('ErrorMessage', ErrorMessage);
+
+// 將SweetAlert2綁定到Vue的原型上，可以在元件下使用this.$swal
+app.config.globalProperties.$swal = Swal;
 
 app.mount('#app');
