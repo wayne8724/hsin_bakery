@@ -79,8 +79,13 @@
   padding: 5px 8%;
 }
 
-.form-control.is-invalid:focus{
-  z-index: 10;
+.form-control:focus{
+  border-color: $primary;
+}
+
+.inputEmail:focus {
+  box-shadow: none;
+  outline: 0;
 }
 
 @media (max-width: 992px) {

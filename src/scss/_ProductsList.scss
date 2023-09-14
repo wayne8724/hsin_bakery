@@ -59,6 +59,21 @@
       color: $third;
       background-color: rgba($secondary, .8);
     }
+    input {
+      border-radius: 0;
+    }
+    .searchInput:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+    .form-control:focus {
+      border-color: rgba($secondary, .3);
+    }
+    .searchBtn {
+      background-color: $secondary;
+      color: $primary;
+      padding: 0 10px;
+    }
   }
   .rightList {
     width: 64.58333%;
@@ -92,7 +107,7 @@
         transition: .3s ease;
       }
       .imgBtn:hover::after {
-        background-color: rgba($primary, .5);
+        background-color: rgba($secondary, .8);
         color: $primary;
       }
       img {

@@ -3,7 +3,8 @@
     <div class="top">
       <div class="container">
         <VForm class="subscribe d-flex
-        justify-content-center align-items-center" v-slot="{ errors }">
+        justify-content-center align-items-center" v-slot="{ errors }"
+        @submit="subscribe">
           <p>訂閱我們讓你大呼過癮</p>
           <div class="input-group">
             <span class="input-group-text">
@@ -17,7 +18,7 @@
             v-model="emailValue"
             ></VField>
             <button class="btn" type="button"
-            @click="subscribe" :disabled="errors['email']||!emailValue" tabindex="0">
+            @click="subscribe" :disabled="errors['email']||!emailValue" tabindex="auto">
               <i class="bi bi-arrow-right"></i>
             </button>
             <ErrorMessage class="invalid-feedback" name="email"></ErrorMessage>
@@ -66,12 +67,14 @@ export default {
   },
   methods: {
     subscribe() {
-      this.$toast.fire({
-        title: '訂閱成功！',
-        icon: 'success',
-        position: 'center',
-        width: 220,
-      });
+      if (this.emailValue) {
+        this.$toast.fire({
+          title: '訂閱成功！',
+          icon: 'success',
+          position: 'center',
+          width: 220,
+        });
+      }
     },
   },
 };

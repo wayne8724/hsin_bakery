@@ -10,6 +10,13 @@
     <div class="productsList">
       <div class="container d-flex justify-content-lg-between flex-lg-row flex-column">
         <div class="leftList">
+          <div class="input-group mb-3">
+            <input type="text"
+            class="form-control searchInput"
+            placeholder="搜尋" aria-label="Search" aria-describedby="search-button">
+            <button class="btn searchBtn"
+            type="button" id="search-button">搜尋</button>
+          </div>
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
             <span class="btn-group-text">甜點類別</span>
             <button type="button" class="btn btn-primary">所有商品</button>
@@ -20,52 +27,16 @@
           </div>
         </div>
         <div class="rightList d-flex flex-row justify-content-center">
-          <div class="card">
+          <div class="card" v-for="item in allProducts" :key="item.id">
             <button @click="productInfo" class="imgBtn">
-              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
+              <img :src="item.imageUrl" class="card-img-top" alt="...">
             </button>
             <div class="card-body">
               <div class="card-title d-flex">
-                <p class="name">焦糖瑪卡龍</p>
-                <p class="price">NT$ 450</p>
+                <p class="name">{{ item.title }}</p>
+                <p class="price">NT$ {{ item.price }}</p>
               </div>
-              <a href="#" class="btn btn-primary">加入購物車</a>
-            </div>
-          </div>
-          <div class="card">
-            <button @click="productInfo" class="imgBtn">
-              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
-            </button>
-            <div class="card-body">
-              <div class="card-title d-flex">
-                <p class="name">焦糖瑪卡龍</p>
-                <p class="price">NT$ 450</p>
-              </div>
-              <a href="#" class="btn btn-primary">加入購物車</a>
-            </div>
-          </div>
-          <div class="card">
-            <button @click="productInfo" class="imgBtn">
-              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
-            </button>
-            <div class="card-body">
-              <div class="card-title d-flex">
-                <p class="name">焦糖瑪卡龍</p>
-                <p class="price">NT$ 450</p>
-              </div>
-              <a href="#" class="btn btn-primary">加入購物車</a>
-            </div>
-          </div>
-          <div class="card">
-            <button @click="productInfo" class="imgBtn">
-              <img src="../assets/selection-left.jpg" class="card-img-top" alt="...">
-            </button>
-            <div class="card-body">
-              <div class="card-title d-flex">
-                <p class="name">焦糖瑪卡龍</p>
-                <p class="price">NT$ 450</p>
-              </div>
-              <a href="#" class="btn btn-primary">加入購物車</a>
+              <button class="btn btn-primary"  @click="addToCart(item)">加入購物車</button>
             </div>
           </div>
         </div>
@@ -105,6 +76,8 @@ import Footer from '@/components/Footer.vue';
 export default {
   data() {
     return {
+      allProducts: {},
+      pagination: {},
     };
   },
   components: {
@@ -115,6 +88,38 @@ export default {
     productInfo() {
       this.$router.push('/product');
     },
+    async getProducts() {
+      try {
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
+        const response = await this.$http.get(url);
+        console.log(response.data);
+        this.allProducts = response.data.products;
+        this.pagination = response.data.pagination;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async addToCart(item) {
+      try {
+        const cartData = {
+          product_id: item.id,
+          qty: 1,
+        };
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+        const response = await this.$http.post(url, { data: cartData });
+        if (response) {
+          this.$toast.fire({
+            title: `${item.title}已加入購物車！`,
+            icon: 'success',
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  created() {
+    this.getProducts();
   },
 };
 </script>

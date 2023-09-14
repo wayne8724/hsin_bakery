@@ -71,3 +71,5 @@ JS：
 製作優惠券Modal功能時，發現以data-bs-target="#exampleModalToggle" data-bs-toggle="modal"實現這個Modal跳到下個Modal時，會出現無法讀取hide值的error，Google之後發現應該是bs5版本的關係，有待實際驗證。
 
 製作複製優惠碼到剪貼簿的功能時，發現execCommand('copy')過氣了，現在改用navigator.clipboard.writeText(foo)來實現複製到剪貼簿功能。
+
+使用vee-validate套件要注意當Form表單裡面有Field時，按enter會直接觸發表單提交，觸發後瀏覽器會嘗試重新加載，所以要注意不要在裡面寫keydown、keypress等事件。（製作Footer Email訂閱功能時的發現）。

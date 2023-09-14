@@ -37,13 +37,13 @@
         <div class="HomeBannerRecommend d-flex justify-content-center align-items-center">
           <div class="innerRecommend left">
             <p @click="goAnchor('#selection')"
-            @keydown="noEvent">本日精選</p>
+            @keypress="noEvent">本日精選</p>
           </div>
           <div class="innerRecommend middle">
             <router-link to="/products" class="selectionLink">商品一欄</router-link>
           </div>
           <div class="innerRecommend right" @click="openCouponModal"
-          @keydown="openCouponModal"><p>優惠領取</p></div>
+          @keypress="noEvent"><p>優惠領取</p></div>
         </div>
       </div>
     </div>
