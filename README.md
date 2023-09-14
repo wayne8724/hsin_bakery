@@ -1,11 +1,10 @@
 # 烘焙店電商網站
 
-**除了收藏頁面，其他頁面切版完成（收藏頁面及功能最後做），開始製作js功能、串接API**
-**首頁領取優惠Modal完成、複製優惠碼功能完成**
+**首頁今日精選API串接完成、Footer Email訂閱表單功能完成**
 **最下方心得持續更新中**
 
 預期進度  
-html、css切版 → JS功能、串接API → 改善或新增功能
+html、css切版 → **JS功能、串接API** → 改善或新增功能
 
 ## Demo
 <https://wayne8724.github.io/hsin_bakery/>

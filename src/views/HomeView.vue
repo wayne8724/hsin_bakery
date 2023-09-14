@@ -37,7 +37,7 @@
         <div class="HomeBannerRecommend d-flex justify-content-center align-items-center">
           <div class="innerRecommend left">
             <p @click="goAnchor('#selection')"
-            @keydown="goAnchor('#selection')">本日精選</p>
+            @keydown="noEvent">本日精選</p>
           </div>
           <div class="innerRecommend middle">
             <router-link to="/products" class="selectionLink">商品一欄</router-link>
@@ -182,25 +182,20 @@ export default {
         const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
         const response = await this.$http.post(url, { data: cartData });
         if (response) {
-          this.$swal.fire({
-            text: `${response.data.data.product.title}已加入購物車！`,
+          this.$toast.fire({
+            title: `${response.data.data.product.title}已加入購物車！`,
             icon: 'success',
-            showConfirmButton: false,
-            timer: 1500,
           });
         }
       } catch (error) {
         console.log(error);
       }
     },
+    noEvent() {
+    },
   },
   created() {
     this.getSelection();
-    // this.$swal.fire({
-    //   text: 'wow',
-    //   background: '#CE0000',
-    // });
-    // 測試
   },
 };
 </script>

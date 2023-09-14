@@ -2,18 +2,27 @@
   <div class="footer">
     <div class="top">
       <div class="container">
-        <div class="subscribe d-flex justify-content-center align-items-center">
+        <VForm class="subscribe d-flex
+        justify-content-center align-items-center" v-slot="{ errors }">
           <p>訂閱我們讓你大呼過癮</p>
           <div class="input-group">
             <span class="input-group-text">
               <i class="bi bi-envelope-fill"></i>
             </span>
-            <input type="email" aria-label="email" class="form-control inputEmail">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+            <VField type="email"
+            aria-label="email" class="form-control
+            inputEmail" id="email" name="email"
+            placeholder="請輸入 Email"
+            rules="email" :class="{ 'is-invalid': errors['email']}"
+            v-model="emailValue"
+            ></VField>
+            <button class="btn" type="button"
+            @click="subscribe" :disabled="errors['email']||!emailValue" tabindex="0">
               <i class="bi bi-arrow-right"></i>
             </button>
+            <ErrorMessage class="invalid-feedback" name="email"></ErrorMessage>
           </div>
-        </div>
+        </VForm>
       </div>
     </div>
     <div class="bottom">
@@ -24,11 +33,11 @@
               <img src="../assets/logo.png" alt="logo">
             </div>
             <div class="contactInformation">
-              <p>07-1234-5678<br>sweetaste@email.com <br>800&ensp;高雄市新興區幸福路 520 號</p>
+              <p>049-2241041<br>timeless.smile@gmail.com <br>540&ensp;南投縣南投市祖祠路 3 號</p>
             </div>
             <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i>1</a>
-              <a href="#"><i class="bi bi-instagram"></i>2</a>
+              <a href="https://www.facebook.com/profile.php?id=100068239142124" target="_blank"><i class="bi bi-facebook"></i>1</a>
+              <a href="https://www.instagram.com/weihsin24/" target="_blank"><i class="bi bi-instagram"></i>2</a>
             </div>
           </div>
           <div class="connectRight d-flex flex-column justify-content-between">
@@ -49,6 +58,21 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      emailValue: '',
+    };
+  },
+  methods: {
+    subscribe() {
+      this.$toast.fire({
+        title: '訂閱成功！',
+        icon: 'success',
+        position: 'center',
+        width: 220,
+      });
+    },
   },
 };
 </script>

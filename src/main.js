@@ -46,5 +46,15 @@ app.component('ErrorMessage', ErrorMessage);
 
 // 將SweetAlert2綁定到Vue的原型上，可以在元件下使用this.$swal
 app.config.globalProperties.$swal = Swal;
-
+// 将Toast通知添加到Vue原型中
+app.config.globalProperties.$toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 2000,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer);
+    toast.addEventListener('mouseleave', Swal.resumeTimer);
+  },
+});
 app.mount('#app');
