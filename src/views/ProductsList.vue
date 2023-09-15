@@ -15,34 +15,35 @@
             class="form-control searchInput"
             placeholder="請輸入商品名稱或關鍵字" aria-label="Search" aria-describedby="search-button"
             v-model="searchValue"
-            @input="updateProducts"
-            @keydown.enter.prevent="updateProducts">
+            @input="searchProducts"
+            @keydown.enter.prevent="searchProducts">
             <button class="btn searchBtn"
             type="button" id="search-button"
-            @click.prevent="updateProducts"
+            @click.prevent="searchProducts"
             >搜尋</button>
           </div>
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
-            <span class="btn-group-text">甜點類別</span>
+            <span class="btn-group-text">商品篩選</span>
             <button type="button" class="btn btn-primary"
-            @click.prevent="getProducts(0)"
+            @click.prevent="filterProducts(0)"
             :class="{'active': this.categoryStatus === 0}">所有商品</button>
             <button type="button" class="btn btn-primary"
-            @click.prevent="filterBread(1)"
+            @click.prevent="filterProducts(1, '麵包')"
             :class="{'active': this.categoryStatus === 1}">麵包</button>
             <button type="button" class="btn btn-primary"
-            @click.prevent="filterToast(2)"
+            @click.prevent="filterProducts(2, '吐司')"
             :class="{'active': this.categoryStatus === 2}">吐司</button>
             <button type="button" class="btn btn-primary"
-            @click.prevent="filterCake(3)"
+            @click.prevent="filterProducts(3, '蛋糕')"
             :class="{'active': this.categoryStatus === 3}">蛋糕</button>
             <button type="button" class="btn btn-primary"
-            @click.prevent="filterMoonCake(4)"
+            @click.prevent="filterProducts(4, '月餅')"
             :class="{'active': this.categoryStatus === 4}">月餅</button>
           </div>
         </div>
-        <div class="rightList d-flex align-items-start">
-          <div class="card" v-for="item in temProducts" :key="item.id">
+        <div class="rightList d-flex align-items-start" v-if="this.temProducts.length > 0">
+          <div class="card" v-for="item in temProducts" :key="item.id"
+          >
             <button @click="productInfo" class="imgBtn">
               <img :src="item.imageUrl" class="card-img-top" alt="...">
             </button>
@@ -55,6 +56,9 @@
             </div>
           </div>
         </div>
+        <div v-else class="mx-auto fs-3">
+            <p>您輸入之商品不存在，請重新搜尋。</p>
+          </div>
       </div>
     </div>
     <div class="productsPagination">
@@ -109,7 +113,7 @@ export default {
     productInfo() {
       this.$router.push('/product');
     },
-    async getProducts(categoryStatus, page = 1) {
+    async getProducts(page = 1) {
       try {
         const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products?page=${page}`;
         const response = await this.$http.get(url);
@@ -117,7 +121,7 @@ export default {
         this.allProducts = response.data.products;
         this.pagination = response.data.pagination;
         this.temProducts = response.data.products;
-        this.categoryStatus = categoryStatus;
+        this.searchValue = '';
       } catch (error) {
         console.log(error);
       }
@@ -140,34 +144,22 @@ export default {
         console.log(error);
       }
     },
-    updateProducts() {
+    searchProducts() {
       const filterData = this.allProducts.filter((item) => item.title.includes(this.searchValue));
-      console.log(filterData);
       this.temProducts = filterData;
+      this.categoryStatus = '';
     },
-    filterBread(categoryStatus) {
-      const filterData = this.allProducts.filter((item) => item.category.includes('麵包'));
-      console.log(filterData);
-      this.temProducts = filterData;
-      this.categoryStatus = categoryStatus;
-    },
-    filterToast(categoryStatus) {
-      const filterData = this.allProducts.filter((item) => item.category.includes('吐司'));
-      console.log(filterData);
-      this.temProducts = filterData;
-      this.categoryStatus = categoryStatus;
-    },
-    filterMoonCake(categoryStatus) {
-      const filterData = this.allProducts.filter((item) => item.category.includes('月餅'));
-      console.log(filterData);
-      this.temProducts = filterData;
-      this.categoryStatus = categoryStatus;
-    },
-    filterCake(categoryStatus) {
-      const filterData = this.allProducts.filter((item) => item.category.includes('蛋糕'));
-      console.log(filterData);
-      this.temProducts = filterData;
-      this.categoryStatus = categoryStatus;
+    filterProducts(categoryStatus, category) {
+      if (categoryStatus === 0) {
+        this.temProducts = this.allProducts;
+        this.categoryStatus = 0;
+        this.searchValue = '';
+      } else {
+        const filterData = this.allProducts.filter((item) => item.category.includes(category));
+        this.temProducts = filterData;
+        this.categoryStatus = categoryStatus;
+        this.searchValue = '';
+      }
     },
   },
   created() {
