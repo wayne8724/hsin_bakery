@@ -170,14 +170,34 @@
         font-size: 20px;
         line-height: 28px;
         padding: 16px 0;
+        margin: 0;
         text-align: center;
         color: $secondary;
         background-color: $primary;
         border-color: rgba($secondary, .2);
+        transition: .3s;
       }
       .page-link:hover {
         color: $primary;
         background-color: $secondary;
+      }
+      .page-link:focus {
+        box-shadow: 0 0 0 0;
+      }
+      .page-link.middle{
+        border-left: 0;
+        border-right: 0;
+      }
+      .paginationActive {
+        background-color: $secondary;
+        color: $third;
+      }
+      .paginationDisable {
+        pointer-events: none;
+        user-select: none;
+        .bi {
+          opacity: .1;
+        }
       }
   }
 }

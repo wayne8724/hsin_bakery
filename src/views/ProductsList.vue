@@ -47,17 +47,20 @@
         <nav aria-label="..." class="d-flex justify-content-lg-end justify-content-center">
           <ul class="pagination">
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="previous">
+              <a class="page-link" href="#" aria-label="previous"
+              @click.prevent="getProducts(pagination.current_page - 1)"
+              :class="{'paginationDisable': pagination.current_page = pagination.total_pages}">
                 <i class="bi bi-caret-left-fill"></i>
               </a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item" aria-current="page">
-              <a class="page-link" href="#">2</a>
+            <li class="page-item" v-for="page in pagination.total_pages" :key="page">
+              <a class="page-link middle" href="#" @click.prevent="getProducts(page)"
+              :class="{'paginationActive': page === pagination.current_page }">{{ page }}</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="previous">
+              <a class="page-link" href="#" aria-label="previous"
+              @click.prevent="getProducts(pagination.current_page + 1)"
+              :class="{'paginationDisable': pagination.current_page = pagination.total_pages}">
                 <i class="bi bi-caret-right-fill"></i>
               </a>
             </li>
@@ -88,9 +91,9 @@ export default {
     productInfo() {
       this.$router.push('/product');
     },
-    async getProducts() {
+    async getProducts(page = 1) {
       try {
-        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products`;
+        const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products?page=${page}`;
         const response = await this.$http.get(url);
         console.log(response.data);
         this.allProducts = response.data.products;
@@ -116,6 +119,8 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    movePage() {
     },
   },
   created() {
