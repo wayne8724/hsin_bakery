@@ -59,6 +59,10 @@
       color: $third;
       background-color: rgba($secondary, .8);
     }
+    .btn.active {
+      color: $third;
+      background-color: rgba($secondary, .8);
+    }
     input {
       border-radius: 0;
     }
